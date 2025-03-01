@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: #ff8c00;
+    font-family: 'Courier New', Courier, monospace;
+} */
+
+.clock {
+  font-size: 100px;
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "Nixie One", serif;
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.digit-container {
+  position: relative;
+  width: 90px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(255, 140, 0, 0.2);
+  overflow: hidden;
+}
+
+/* .digit {
+  position: absolute;
+  font-size: 120px;
+  font-weight: bold;
+  opacity: 0.15;
+  color: #3d2b1f;
+  text-shadow: 0 0 2px #2a1d12;
+  filter: blur(1px);
+} */
+
+.illuminated {
+  opacity: 1;
+  color: orange;
+  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
+    0 0 50px rgba(255, 140, 0, 0.8);
+  filter: blur(0px);
+}
+
+.hex-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("hexmap2.png"); /* Use a hexagonal mesh overlay */
+  opacity: 0.3;
+}
+
+/* Tool to create hex-grid: https://hamhambone.github.io/hexgrid/ */
+
+.digit-container {
+  position: relative;
+  width: 60px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(hexmap4.png);
+  background-size: 150%;
+}
+
+.digit {
+  position: absolute;
+  font-size: 100px;
+  font-weight: bold;
+  opacity: 0.2;
+  color: #5a3e26;
+  text-shadow: 0 0 2px #3d2b1f;
+}
+
+.illuminated {
+  opacity: 1;
+  color: orange;
+  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
+    0 0 50px rgba(255, 140, 0, 0.8);
+}
