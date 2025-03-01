@@ -72,7 +72,7 @@ to a lighter color. Maybe a brownish orange? */
 
 .illuminated {
   /* Brightness of illuminated digit */
-  opacity: 0.8;
+  opacity: 1;
   color: orange;
   text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
     0 0 50px rgba(255, 140, 0, 0.8);
