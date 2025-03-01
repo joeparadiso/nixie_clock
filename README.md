@@ -1,3 +1,5 @@
+# Nixie Clock
+
 This repo is for a webpage that displays a digital version of a Nixie Tube clock. 
 
 I had the idea of creating an actual Nixie Tube clock using actual hardware and a microcontroller. 
