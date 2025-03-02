@@ -10,6 +10,8 @@ My goal for creating this clock was to work on my technical skills and create so
 
 I decided that, until I have the space for a physical clock project, I should create a digital clock project.
 
+To see a real Nixie Tube clock, see this [video](https://www.youtube.com/watch?v=V1bPK1YQE60).
+
 And that's where this begins: the Nixie Clock...
 
 NOTES:
