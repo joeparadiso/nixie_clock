@@ -42,10 +42,68 @@ body {
     0 0 50px rgba(255, 140, 0, 0.8);
 }
 
+/* 🔹 Make colons (:) glow like Nixie tubes */
 .separator {
   font-size: 120px;
   color: orange;
-  /* text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500; */
-  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
-    0 0 50px rgba(255, 140, 0, 0.8);
+  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500;
+  animation: flicker 2s infinite alternate ease-in-out; /* 🔹 Make them flicker too */
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 6px #ff8c00, 0 0 12px #ff4500;
+  }
+  25% {
+    opacity: 0.98;
+    text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff3b00;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 7px #ff8c00, 0 0 14px #ff4500;
+  }
+  75% {
+    opacity: 0.99;
+    text-shadow: 0 0 6px #ff7a00, 0 0 11px #ff4000;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 6px #ff8c00, 0 0 12px #ff4500;
+  }
+}
+
+/* OLD */
+/* @keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 8px #ff8c00, 0 0 16px #ff4500, 0 0 24px #ff8c00; }
+  25% { opacity: 0.98; text-shadow: 0 0 7px #ff6a00, 0 0 14px #ff3b00; }
+  50% { opacity: 1; text-shadow: 0 0 10px #ff8c00, 0 0 18px #ff4500; }
+  75% { opacity: 0.99; text-shadow: 0 0 9px #ff7a00, 0 0 15px #ff4000; }
+  100% { opacity: 1; text-shadow: 0 0 8px #ff8c00, 0 0 16px #ff4500; }
+} */
+
+@keyframes flash {
+  0% {
+    opacity: 0.85;
+    transform: scale(1.02);
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Base illuminated effect */
+.illuminated {
+  animation: flicker 2s infinite alternate ease-in-out;
+}
+
+/* Flash effect when digits change */
+.flash {
+  animation: flash 0.08s ease-out;
 }
