@@ -6,64 +6,29 @@ body {
   align-items: center;
   height: 100vh;
   background-color: black;
-  /* Nixie One font from Google Fonts */
   font-family: "Nixie One", serif;
 }
 
 .clock {
-  position: relative;
   display: flex;
-  gap: 20px;
-}
-
-/* .digit-container {
-  position: relative;
-  width: 90px;
-  height: 140px;
-  display: flex;
-  justify-content: center;
+  gap: 10px;
   align-items: center;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  box-shadow: inset 0 0 10px rgba(255, 140, 0, 0.2);
-  overflow: hidden;
-} */
-
-/* .illuminated {
-  opacity: 1;
-  color: orange;
-  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
-    0 0 50px rgba(255, 140, 0, 0.8);
-  filter: blur(0px);
-} */
-
-.hex-grid {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("hexmap2.png"); /*Use a hexagonal mesh overlay*/
-  /* opacity: 0.3; */
 }
 
 .digit-container {
   position: relative;
-  width: 120px;
-  height: 200px;
+  width: 100px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Tool to create hex-grid: https://hamhambone.github.io/hexgrid/ */
   background: url(hexmap4.png);
   background-size: 100%;
-  /* TODO: Add a new bolder/lighter hexmap and update the background color
-to a lighter color. Maybe a brownish orange? */
-  /* background-color: #060504; */
 }
 
-/* Control the size and display of the numbers */
 .digit {
   position: absolute;
-  font-size: 200px;
+  font-size: 160px;
   font-weight: bold;
   opacity: 0.2;
   color: #5a3e26;
@@ -71,9 +36,16 @@ to a lighter color. Maybe a brownish orange? */
 }
 
 .illuminated {
-  /* Brightness of illuminated digit */
   opacity: 1;
   color: orange;
+  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
+    0 0 50px rgba(255, 140, 0, 0.8);
+}
+
+.separator {
+  font-size: 120px;
+  color: orange;
+  /* text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500; */
   text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff8c00,
     0 0 50px rgba(255, 140, 0, 0.8);
 }
